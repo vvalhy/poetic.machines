@@ -26,6 +26,15 @@ def setup():
 
 run()
 
+#line = "Grass grows quietly through small cracks in the concrete"
+ground = ["Grass","grows", "quietly", "through", "small", "cracks", "in", "the", "concrete"]
+for i, t in enumerate(ground):
+    stroke(0)
+    fill(0,255,0)
+    # use the index i to update the y (height placement)
+    text(t, alignment_point, 50 + i * 20)
+show()
+
 # IDEAS, to make it your own:
 # - Where does the snowball magic happen? It's when we combine the loop logic
 #   with the slicing `[:i]`. Currently the text grows from left to right, can
@@ -51,3 +60,5 @@ run()
 # - Like before, you could move everything from `background` downwards into a
 #   `def draw():` function – respecting the indent! – if you wanted to add some
 #   animation later down the line.
+
+
